@@ -1,0 +1,517 @@
+{
+	"info": {
+		"_postman_id": "09baf944-0569-4747-a7e6-ff0e9da5c824",
+		"name": "Time Allocation Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get all Users",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}{{version}}/users",
+							"host": [
+								"{{host}}{{version}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users filter by name",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}{{version}}/users?name=rafaeal",
+							"host": [
+								"{{host}}{{version}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "rafaeal"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users filter by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}{{version}}/users/1",
+							"host": [
+								"{{host}}{{version}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"rafael21@gmail.com\",\r\n  \"login\": \"rafae21\",\r\n  \"name\": \"Rafael2 Duarte1\",\r\n  \"password\": \"string\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}{{version}}/users",
+							"host": [
+								"{{host}}{{version}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"rafael123@gmail.com\",\r\n  \"login\": \"123\",\r\n  \"name\": \"strin123g\",\r\n  \"password\": \"string\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}{{version}}/users/3",
+							"host": [
+								"{{host}}{{version}}"
+							],
+							"path": [
+								"users",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Project",
+			"item": [
+				{
+					"name": "Get all Projects",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}{{version}}/projects",
+							"host": [
+								"{{host}}{{version}}"
+							],
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Project filter by title",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}{{version}}/projects?title=project",
+							"host": [
+								"{{host}}{{version}}"
+							],
+							"path": [
+								"projects"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "project"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Project filter by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}{{version}}/projects/4",
+							"host": [
+								"{{host}}{{version}}"
+							],
+							"path": [
+								"projects",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save project",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": \"Project 2\",\r\n\t\"description\": \"description description description\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}{{version}}/projects",
+							"host": [
+								"{{host}}{{version}}"
+							],
+							"path": [
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update project",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"title\": \"project3\",\r\n\t\"description\": \"string\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}{{version}}/projects/4",
+							"host": [
+								"{{host}}{{version}}"
+							],
+							"path": [
+								"projects",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Time",
+			"item": [
+				{
+					"name": "Get all times",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}{{version}}/times",
+							"host": [
+								"{{host}}{{version}}"
+							],
+							"path": [
+								"times"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get time filter by user id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}{{version}}/times/user/6",
+							"host": [
+								"{{host}}{{version}}"
+							],
+							"path": [
+								"times",
+								"user",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get time filter by project id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}{{version}}/times/project/2",
+							"host": [
+								"{{host}}{{version}}"
+							],
+							"path": [
+								"times",
+								"project",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Time filter by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}{{version}}/times/6",
+							"host": [
+								"{{host}}{{version}}"
+							],
+							"path": [
+								"times",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save project",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"userId\": 1,\r\n\t\"projectId\": 4,\r\n\t\"endedAt\": \"2021-07-07T13:12:31.702-03:00\",\r\n\t\"startAt\": \"2021-07-08T13:15:31.702-03:00\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}{{version}}/times",
+							"host": [
+								"{{host}}{{version}}"
+							],
+							"path": [
+								"times"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update project",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"userId\": 1,\r\n\t\"projectId\": 4,\r\n\t\"endedAt\": \"2021-01-07T13:12:31.702-03:00\",\r\n\t\"startAt\": \"2021-01-08T13:15:31.702-03:00\"\r\n}"
+						},
+						"url": {
+							"raw": "{{host}}{{version}}/times/6",
+							"host": [
+								"{{host}}{{version}}"
+							],
+							"path": [
+								"times",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Authentication",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.globals.set(\"token\", pm.response.json().token);\r",
+									"console.log(pm.response.json().token)\r",
+									"console.log(pm.globals.get(\"token\"))"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"login\": \"rafae21\",\n\t\"password\": \"string\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
