@@ -34,30 +34,6 @@ The time entity has the following attributes:
 - endedAt: DATETIME
 - and is associating with the user and project entities.
 
-### Development estimation
-|                        Activity                              | Estimate in hours |
-|------------------------------------------------------------|:-------------------:|
-| Scope   understanding                                        | 1                 |
-| Initial   project definitions                                | 2                 |
-| Entity   layer creation                                      | 2                 |
-| Creation   of controller layer for user entity               | 3                 |
-| Creation   of controller layer for project and time          | 6                 |
-| Creation Business   Rule Layer                               | 6                 |
-| Creating   the repository layer                              | 4                 |
-| Creating   security by authentication                        | 8                 |
-| Documentation                                                | 2                 |
-| Total estimated hours                                        | ***34***                |
-
-### Test estimation
-|                        Activity                              | Estimate in hours |
-|------------------------------------------------------------|:-------------------:|
-| Automated Integration Tests                                | 20                  |
-| Manual tests using the Postman tool                        | 4                   |
-| Total estimated hours                                      | ***24***                  |
-
-#### Estimated dead line
-* Estimated delivery of the system is ***7 days***. ***Considering a day as 8 hours of work***.
-
 ## Technological information
 
 #### Dependencies
@@ -93,10 +69,6 @@ cd time-allocation-project
 ```
 http://<HOST>:8080/swagger-ui.html#/
 ```
-
-### DEPLOY
-- Deploy on [heroku](https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku): https://dry-island-48440.herokuapp.com/swagger-ui.html#/
-- Default user credentials: login: admin / password: password
 
 ### Postman collection
 * It is possible to interact with the APIs using the [Postman tool](https://www.postman.com/). Just [import](https://kb.datamotion.com/?ht_kb=postman-instructions-for-exporting-and-importing) the [collection and environment variables](http://git.vibbra.com.br/rafael-1624318740/time-allocation-project/-/tree/master/postman).
